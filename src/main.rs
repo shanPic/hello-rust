@@ -1,7 +1,15 @@
 fn main() {
-    // let x = 5; //error! rust的变量默认不可变
-    let x = 5;
-    println!("The value of x is {}", x);
-    let x = "liuzhanshan";
-    println!("The value of x is {}", x);
+
+    let mut loop_num = 0;
+
+    let x = loop {
+        loop_num = loop_num + 1;
+
+        if loop_num == 10 {
+            break loop_num * 2;
+        };
+    };
+
+    assert_eq!(x, 20);
+    println!("{}", x);
 }
