@@ -1,4 +1,6 @@
 fn main() {
+
+    // correct
     let mut str = String::from("string");
     change(&mut str);
     println!("{}", str);
